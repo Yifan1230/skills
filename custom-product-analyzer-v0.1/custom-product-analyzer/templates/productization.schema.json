@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProductizationOpportunity",
+  "type": "object",
+  "required": [
+    "feature_id",
+    "recommendation",
+    "confidence",
+    "rationale",
+    "evidence"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string"
+    },
+    "recommendation": {
+      "enum": [
+        "strong_productization_candidate",
+        "productization_candidate",
+        "configuration_candidate",
+        "observe",
+        "keep_custom"
+      ]
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "counter_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "human_confirmation_needed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

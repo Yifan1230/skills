@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ChangeUnit",
+  "type": "object",
+  "required": [
+    "change_unit_id",
+    "customer",
+    "canonical_app",
+    "title",
+    "confidence",
+    "inference_type",
+    "evidence"
+  ],
+  "properties": {
+    "change_unit_id": {
+      "type": "string"
+    },
+    "customer": {
+      "type": "string"
+    },
+    "canonical_app": {
+      "type": "string"
+    },
+    "actual_app": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "baseline_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "technical_changes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "affected_pages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_models": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_tables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "db_changes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "change_reference_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inferred_business_change": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inference_type": {
+      "enum": [
+        "code_fact",
+        "document_fact",
+        "agent_inference",
+        "human_confirmed"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

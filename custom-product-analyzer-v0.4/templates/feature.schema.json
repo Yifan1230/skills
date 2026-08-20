@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BusinessFeature",
+  "type": "object",
+  "required": [
+    "feature_id",
+    "feature_name",
+    "canonical_app"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string"
+    },
+    "feature_name": {
+      "type": "string"
+    },
+    "canonical_app": {
+      "type": "string"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parent_feature_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_change_units": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FeatureVariant",
+  "type": "object",
+  "required": [
+    "feature_id",
+    "customer",
+    "variant_name",
+    "presence"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string"
+    },
+    "customer": {
+      "type": "string"
+    },
+    "actual_app": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "variant_name": {
+      "type": "string"
+    },
+    "variant_description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "presence": {
+      "type": "boolean"
+    },
+    "source_change_units": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "baseline_quality": {
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "unknown"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  }
+}

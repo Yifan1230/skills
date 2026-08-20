@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProductProblemCard",
+  "type": "object",
+  "required": [
+    "product_problem_id",
+    "product_problem_title",
+    "business_scenario",
+    "current_standard_behavior",
+    "user_or_business_problem",
+    "root_product_gap",
+    "optimization_goal",
+    "proposed_product_capability",
+    "recommendation_type",
+    "confidence",
+    "evidence"
+  ],
+  "properties": {
+    "product_problem_id": {"type": "string"},
+    "feature_ids": {"type": "array", "items": {"type": "string"}},
+    "product_problem_title": {"type": "string"},
+    "business_scenario": {"type": "string"},
+    "actor": {"type": ["string", "null"]},
+    "current_standard_behavior": {"type": "string"},
+    "customer_variations": {"type": "array", "items": {"type": "object"}},
+    "user_or_business_problem": {"type": "string"},
+    "root_product_gap": {"type": "string"},
+    "optimization_goal": {"type": "string"},
+    "proposed_product_capability": {"type": "string"},
+    "scope_or_config_dimensions": {"type": "array", "items": {"type": "string"}},
+    "product_value": {"type": "array", "items": {"type": "string"}},
+    "recommendation_type": {
+      "enum": [
+        "strong_productization_candidate",
+        "productization_candidate",
+        "configuration_candidate",
+        "observe",
+        "keep_custom"
+      ]
+    },
+    "recommendation_label_cn": {"type": "string"},
+    "evidence": {"type": "array", "items": {"type": "object"}},
+    "counter_evidence": {"type": "array", "items": {"type": "object"}},
+    "confidence": {"enum": ["high", "medium", "low"]},
+    "human_confirmation_needed": {"type": "array", "items": {"type": "string"}},
+    "technical_only": {"type": "boolean", "default": false}
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ApplicationVariant",
+  "type": "object",
+  "required": [
+    "canonical_app",
+    "customer",
+    "actual_app",
+    "path",
+    "variant_type",
+    "match_confidence"
+  ],
+  "properties": {
+    "canonical_app": {
+      "type": "string"
+    },
+    "customer": {
+      "type": "string"
+    },
+    "actual_app": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "application_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emap_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "change_reference_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "variant_type": {
+      "enum": [
+        "standard-name",
+        "$A-extension",
+        "school-suffix-copy",
+        "r-directory-customization",
+        "identity-matched",
+        "custom-independent",
+        "uncertain"
+      ]
+    },
+    "match_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "match_confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  }
+}

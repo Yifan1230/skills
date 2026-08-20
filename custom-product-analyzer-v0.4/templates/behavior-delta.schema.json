@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BehaviorDelta",
+  "type": "object",
+  "required": [
+    "behavior_delta_id",
+    "customer",
+    "canonical_app",
+    "business_scenario",
+    "standard_behavior",
+    "variant_behavior",
+    "user_visible_difference",
+    "behavior_status",
+    "confidence",
+    "technical_evidence_refs"
+  ],
+  "properties": {
+    "behavior_delta_id": {"type": "string"},
+    "customer": {"type": "string"},
+    "canonical_app": {"type": "string"},
+    "actor": {"type": "string"},
+    "business_scenario": {"type": "string"},
+    "trigger": {"type": "string"},
+    "preconditions": {"type": "array", "items": {"type": "string"}},
+    "standard_behavior": {"type": "string"},
+    "variant_behavior": {"type": "string"},
+    "user_visible_difference": {"type": "string"},
+    "business_outcome_difference": {"type": "string"},
+    "behavior_type": {"enum": ["visible_content","operation_scope","validation_rule","workflow","data_scope","permission","default_behavior","calculation","timing","external_interaction","unknown"]},
+    "behavior_status": {"enum": ["confirmed","probable","insufficient_evidence"]},
+    "confidence": {"enum": ["high","medium","low"]},
+    "technical_evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "business_evidence_refs": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "system": {
+    "name": "示例项目管理系统",
+    "scope": "项目申报至结项",
+    "business_domains": ["项目配置", "项目申报", "审核评审", "过程管理"]
+  },
+  "business_objects": [
+    {
+      "id": "BO-001",
+      "name": "项目批次",
+      "definition": "某类项目在具体时间范围内的一次执行",
+      "category": "主对象",
+      "relationships": ["属于项目种类", "包含项目申请"],
+      "states": ["草稿", "已发布", "已结束"],
+      "actors": ["管理员"],
+      "confidence": "明确"
+    }
+  ],
+  "business_rules": [
+    {
+      "id": "BR-001",
+      "name": "申报时间规则",
+      "object_ids": ["BO-001"],
+      "condition": "当前批次处于申报开放期",
+      "result": "允许提交申请",
+      "scenario_ids": ["SC-001"],
+      "evidence": "申报提交处理逻辑",
+      "confidence": "明确"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-001",
+      "name": "开放期内正常提交",
+      "actor": "申请人",
+      "object_ids": ["BO-001"],
+      "preconditions": ["批次开放"],
+      "action": "提交申请",
+      "result": "进入待审核",
+      "rule_ids": ["BR-001"],
+      "exception_paths": []
+    }
+  ],
+  "unknowns": []
+}

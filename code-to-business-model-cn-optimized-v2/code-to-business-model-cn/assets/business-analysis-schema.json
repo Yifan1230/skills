@@ -1,0 +1,56 @@
+{
+  "system": {
+    "name": "",
+    "scope": "",
+    "business_domains": []
+  },
+  "business_objects": [
+    {
+      "id": "BO-001",
+      "name": "",
+      "definition": "",
+      "category": "主对象|配置对象|过程对象|结果对象|记录",
+      "relationships": [],
+      "states": [],
+      "actors": [],
+      "confidence": "明确|推测|待确认"
+    }
+  ],
+  "business_rules": [
+    {
+      "id": "BR-001",
+      "name": "",
+      "object_ids": [],
+      "condition": "",
+      "result": "",
+      "scenario_ids": [],
+      "evidence": "",
+      "confidence": "明确|推测|待确认"
+    }
+  ],
+  "decision_tables": [
+    {
+      "id": "DT-001",
+      "name": "",
+      "conditions": [],
+      "cases": []
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-001",
+      "name": "",
+      "actor": "",
+      "object_ids": [],
+      "preconditions": [],
+      "action": "",
+      "result": "",
+      "rule_ids": [],
+      "exception_paths": []
+    }
+  ],
+  "actors": [],
+  "configurations": [],
+  "unknowns": [],
+  "coverage": {}
+}

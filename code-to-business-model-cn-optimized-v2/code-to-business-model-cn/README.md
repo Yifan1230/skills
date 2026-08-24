@@ -1,6 +1,4 @@
-# Code → Business Model（优化版）
-
-本版本针对“大型源码 + 产品业务逆向”进行了瘦身。
+# Code → Business Model 
 
 核心原则：
 
